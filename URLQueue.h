@@ -1,0 +1,35 @@
+/*********************************
+ *                               *
+ * Howorka Sarah      - fhs33719 *
+ * Poschacher Michael - fhs33734 *
+ * Slamanig Sebastian - fhs33741 *
+ *                               *
+ *********************************/
+#ifndef URLQUEUE_H
+#define URLQUEUE_H
+
+#include <deque>
+#include <pthread.h>
+#include <string>
+#include <iostream>
+
+using namespace std;
+
+class URLQueue {
+    public:
+        URLQueue( unsigned v_num_of_threads ) : operators( v_num_of_threads ) {}
+        ~URLQueue(){}
+        void append(const string &x);
+        string get();
+        unsigned int size() const;
+        void set_operators( unsigned v_num_of_threads );
+
+    private:
+        mutable pthread_mutex_t mutex;
+        mutable pthread_cond_t cond;
+        bool terminate = false;
+        deque<string> q;
+        unsigned operators = 0;
+};
+
+#endif

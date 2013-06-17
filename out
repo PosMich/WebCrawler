@@ -1,0 +1,107 @@
+g++ *.cpp -Wall -Weffc++ -lrt -pthread -lcurl -lboost_regex -o WebCrawler.out
+valgrind --tool=memcheck ./WebCrawler.out  http://multimediatechnology.at/~fhs33741/web-crawler/0a6x0q2qk9ecjr0vbxrs.html 1000 4
+start_point: http://multimediatechnology.at/~fhs33741/web-crawler/0a6x0q2qk9ecjr0vbxrs.html
+iterations: 1000
+threads: 4
+Kot: 0
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf
+Kot: 2
+asdfasdfasdf

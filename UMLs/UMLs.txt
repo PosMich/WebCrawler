@@ -1,0 +1,2 @@
+Alle Diagramme (Ablauf-Diagramm seriell, Ablauf-Diagramm parallel, Klassen-Diagramm) des WebCrawlers befinden sich im Google Drive Ordner:
+https://drive.google.com/folderview?id=0Bx7Ig_Nk6ZxxLXBubFZxaVZSOEU&usp=sharing

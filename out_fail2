@@ -1,0 +1,83 @@
+./WebCrawler.out  http://multimediatechnology.at/~fhs33741/webcrawler-fail/4cnaa0fpw4ri16uszl6g.html 10000 2
+creating threads
+Thread with id: Thread with id: 4691262301158446912625112832 is running. is running.
+
+Thread 46912623011584 exits.
+Thread 46912625112832 exits.
+************** CrawList **************
+Total time needed: 26.9888
+Good Links found: 10
+Broken Links found: 59
+Total Links found: 69
+
+************** Details **************
+URL	Broken	Counter	AVG-load-time	MAX-load-time
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/4cnaa0fpw4ri16uszl6g.html	good	107	0.0647724	0.928998
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/ftmyffb6gsyd99v4f6l8.html	good	68	0.0578565	0.90677
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/f4fg1itkstl88ogtl3zv.html	broken	21	0.0478379	0.903917
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/63i12qkfarpp8n83xpfe.html	broken	21	0.00679067	0.00789097
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/840xjomc0jk18jp8493g.html	good	64	0.0480985	0.906834
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/inpqsa836eby5m4ferqa.html	broken	21	0.0494339	0.903815
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/477szia61043gnqus04r.html	broken	21	0.0909678	0.908502
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/86jbukjvssdjgl418k3m.html	good	41	0.0937918	0.907017
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/a7y3794yb7k92e2jcpt2.html	broken	21	0.0477803	0.903889
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/oe7kopxoooee76w913v8.html	broken	19	0.0552747	0.907737
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/6pfkgzo2u0cn4wfstvoe.html	broken	19	0.0547065	0.907761
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/1wsrqyxbxqe1plepvhqz.html	broken	19	0.00678508	0.0091851
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/ncp2xlzbfhoy89nst031.html	good	23	0.0452561	0.906633
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/binkizd5uykes8jwhisf.html	broken	19	0.0520634	0.903901
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/5zyxyssidh4bby239x6b.html	good	24	0.0796174	0.908173
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/xgyavmvg3z0rb4wj6kgb.html	broken	18	0.0552548	0.904952
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/203zckgj7fxnyquuga7q.html	good	42	0.0915452	0.906743
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/2sq6kwittmndicwuj98e.html	broken	18	0.104565	0.904208
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/xmdnuo1l7t2n31di4d2l.html	broken	18	0.0550167	0.903979
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/ho5e275exvs5fwxj7ljv.html	broken	18	0.054615	0.905782
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/hpuk5dlpu8he9dhtpx2u.html	broken	18	0.0569156	0.906728
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/m93x6rpvrfp9td1vxnzm.html	broken	18	0.0641928	1.03052
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/dc0dq3uteqx580sc9gfv.html	broken	9	0.0060244	0.00911465
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/36w69fsk872zorkwbynp.html	broken	9	0.0052098	0.00762679
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/uqqonhdelgnh1kht1831.html	broken	9	0.00795751	0.0127916
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/f9pzzvyuef5zz24r6bdw.html	broken	9	0.00822117	0.0132858
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/tydukpjk7bpxneilgoq0.html	broken	9	0.20759	0.907869
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/mmkzjcw4ackf30qzbn5y.html	good	10	0.00467418	0.00783711
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/zgraohhg8ifm4fzccftd.html	broken	9	0.204111	0.90381
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/cmjbknebl2yhet4eauy0.html	broken	3	0.00415383	0.00483837
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/do67onzwq5tjhzo20pjb.html	broken	3	0.00623127	0.00716347
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/33dn8a6mccaec2ikzfbs.html	broken	3	0.00648255	0.00751499
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/o7y5rt0iq8t8zileqgtc.html	broken	3	0.00782633	0.00847381
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/17qiccjzyb64avs2erfw.html	broken	3	0.00705764	0.00712333
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/nmn3qzi240xsrqjr5xzp.html	broken	3	0.00774993	0.00869545
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/opg0sbq0s5nexq1ogq08.html	broken	3	0.00716673	0.007649
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/7zl9wnw6vc9azqsnoqf3.html	broken	4	0.230943	0.906792
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/wlsomjh5vij35c6igr2o.html	good	10	0.00588905	0.00741867
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/cm8shn9otjat6vplc1lz.html	broken	4	0.00550832	0.00708251
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/n0yfgf8394a65biy5t3v.html	broken	4	0.00564674	0.00808826
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/9kwcv234q38fw19dwoei.html	broken	4	0.0052893	0.00704138
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/vlkz1xi0hcr4jxch7unh.html	broken	4	0.00670161	0.00812327
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/g2r4un03p7ev60tmi9x6.html	broken	4	0.0135266	0.0313813
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/xvrjokgbtomatdpmm55p.html	broken	4	0.232863	0.909202
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/v4qr6rsc3c6g2ezijij5.html	broken	6	0.00515846	0.0070867
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/cawsh7sz73zybdqoon1f.html	broken	6	0.00711296	0.00900471
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/t31fnw4v06i9sdhn22fa.html	broken	6	0.00498869	0.0069905
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/nchvusxog1ln8e30wlo3.html	broken	6	0.157115	0.907173
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/s371stcisnglxagb4ow9.html	broken	6	0.157467	0.90682
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/ntgyjf8dsm1xi3ej39hx.html	broken	6	0.00493519	0.00678599
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/qwo1oe5p1sr1kq4x197l.html	broken	6	0.00704675	0.00875682
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/l6kb0c0ba6zccccrnq1u.html	broken	6	0.00723066	0.00796437
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/c1dzhb4tsryq42jvn4w7.html	broken	2	0.00534592	0.00681066
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/f83ksh0oj2non6v7sf7n.html	broken	2	0.00606434	0.00800723
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/s2ulexbttufc4tvpg3hl.html	broken	2	0.00575003	0.00708628
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/5e93o0p7vnrpl5abm0et.html	broken	2	0.00579547	0.0068395
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/os17a6n75pf5wd21u9tw.html	broken	2	0.00692829	0.00695712
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/fkklxwuiusrvzyatvvdl.html	broken	2	0.00681096	0.00701116
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/w32esq9x28aloww6v9o6.html	broken	5	0.00599971	0.00726491
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/8zqc77ohunozyvgm5yme.html	good	10	0.0959533	0.90657
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/rmwmk62uzd7l3qdig8yf.html	broken	5	0.18542	0.90392
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/kalhmip0kbo83p1rlv4o.html	broken	5	0.186942	0.909741
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/2m03wdzou2ifji41ulyi.html	broken	5	0.00555581	0.0071256
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/nyjayphtdd0xgssk9fiz.html	broken	5	0.187853	0.90968
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/1v2hl2agukd61hxh7578.html	broken	1	0.00797278	0.00797278
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/ao8ynouuhm1ahn1eltv0.html	broken	1	0.00367706	0.00367706
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/p0codl0nkmbvnf2jm5zk.html	broken	1	0.00393935	0.00393935
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/46grnmeb8q8fagxzrr5n.html	broken	1	0.00478096	0.00478096
+http://multimediatechnology.at/~fhs33741/webcrawler-fail/89ypyxeedtvyndkqkz0m.html	broken	1	0.00750645	0.00750645
