@@ -74,3 +74,5 @@ Einschränkungen:
 Ausgaben:
 	Es wird nach Ablauf der Iterationen bzw. wenn alle Urls besucht wurden eine Statistik mit folgenden Werten ausgegeben:
 	URL BROKEN? VISIT_COUNTER AVG_LOADTIME MAX_LOADTIME
+
+	Zusammengeschönte Ausgabe: siehe web-crawler.ods bzw. web-crawler.pdf
