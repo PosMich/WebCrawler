@@ -18,7 +18,7 @@ using namespace std;
 class Crawlist
 {
 	public:
-		Crawlist(){}
+		Crawlist();
 		~Crawlist();
 
 		void add( CrawlistElement* element );
@@ -34,6 +34,7 @@ class Crawlist
 		void print();
 
 	private:
+        pthread_mutex_t m;
 		vector<CrawlistElement> crawlist;
 };
 

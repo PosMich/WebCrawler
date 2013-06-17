@@ -1,0 +1,133 @@
+start_point: https://www.google.at
+iterations: 20
+threads: 4
+creating threads
+214816512: base url = https://
+214816512: curr url = https://www.google.at
+214816512: URL response-code: 0
+214816512: --------------- Element not in CrawList -> add.
+214816512: raw_data: https://https://www.google.at/webhp?hl=de&tab=ww
+223209216: base url = https://https://www.google.at/
+223209216: curr url = https://https://www.google.at/webhp?hl=de&tab=ww
+231601920: base url = https://https://www.google.at/
+231601920: curr url = https://https://www.google.at/imghp?hl=de&tab=wi
+214816512: raw_data: https://https://www.google.at/imghp?hl=de&tab=wi
+239994624: base url = https://https://maps.google.at/
+239994624: curr url = https://https://maps.google.at/maps?hl=de&tab=wl
+214816512: raw_data: https://https://maps.google.at/maps?hl=de&tab=wl
+214816512: raw_data: https://https://play.google.com/?hl=de&tab=w8
+214816512: raw_data: https://https://www.youtube.com/?gl=AT&tab=w1
+214816512: raw_data: https://https://news.google.at/nwshp?hl=de&tab=wn
+214816512: raw_data: https://https://mail.google.com/mail/?tab=wm
+214816512: raw_data: https://https://drive.google.com/?tab=wo
+214816512: raw_data: http://www.google.at/intl/de/options/
+214816512: raw_data: https://https://www.google.com/calendar?tab=wc
+214816512: raw_data: https://https://translate.google.at/?hl=de&tab=wT
+214816512: raw_data: http://books.google.at/bkshp?hl=de&tab=wp
+214816512: raw_data: https://https://www.blogger.com/?tab=wj
+214816512: raw_data: http://picasaweb.google.at/home?hl=de&tab=wq
+214816512: raw_data: http://video.google.at/?hl=de&tab=wv
+214816512: raw_data: http://www.google.at/intl/de/options/
+214816512: raw_data: https://https://accounts.google.com/ServiceLogin?hl=de&continue=https://www.google.at/
+214816512: raw_data: http://www.google.at/preferences?hl=de
+214816512: raw_data: https:///preferences?hl=de
+214816512: raw_data: http://www.google.at/history/optout?hl=de
+214816512: raw_data: https:///advanced_search?hl=de-AT&amp;authuser=0
+214816512: raw_data: https:///language_tools?hl=de-AT&amp;authuser=0
+214816512: raw_data: https:///intl/de/ads/
+214816512: raw_data: http://www.google.at/intl/de/services/
+214816512: raw_data: https:///intl/de/about.html
+214816512: raw_data: https://https://www.google.at/setprefdomain?prefdom=US&amp;sig=0_ikrEc_TD8XCqpiMRzb7rb7AvvOQ%3D
+214816512: raw_data: https:///intl/de/policies/
+214816512: base url = https://https://play.google.com/
+214816512: curr url = https://https://play.google.com/?hl=de&tab=w8
+231601920: URL response-code: 6
+231601920: --------------- Element not in CrawList -> add.
+231601920: base url = https://https://www.youtube.com/
+231601920: curr url = https://https://www.youtube.com/?gl=AT&tab=w1
+223209216: URL response-code: 6
+223209216: --------------- Element not in CrawList -> add.
+223209216: base url = https://https://news.google.at/
+223209216: curr url = https://https://news.google.at/nwshp?hl=de&tab=wn
+239994624: URL response-code: 6
+239994624: --------------- Element not in CrawList -> add.
+239994624: base url = https://https://mail.google.com/mail/
+239994624: curr url = https://https://mail.google.com/mail/?tab=wm
+214816512: URL response-code: 6
+214816512: --------------- Element not in CrawList -> add.
+214816512: base url = https://https://drive.google.com/
+214816512: curr url = https://https://drive.google.com/?tab=wo
+239994624: URL response-code: 6
+239994624: --------------- Element not in CrawList -> add.
+239994624: base url = http://www.google.at/intl/de/options/
+239994624: curr url = http://www.google.at/intl/de/options/
+231601920: URL response-code: 6
+231601920: --------------- Element not in CrawList -> add.
+231601920: base url = https://https://www.google.com/
+231601920: curr url = https://https://www.google.com/calendar?tab=wc
+223209216: URL response-code: 6
+223209216: --------------- Element not in CrawList -> add.
+223209216: base url = https://https://translate.google.at/
+223209216: curr url = https://https://translate.google.at/?hl=de&tab=wT
+214816512: URL response-code: 6
+214816512: --------------- Element not in CrawList -> add.
+214816512: base url = http://books.google.at/
+214816512: curr url = http://books.google.at/bkshp?hl=de&tab=wp
+239994624: URL response-code: 0
+239994624: --------------- Element not in CrawList -> add.
+239994624: raw_data: http://www.google.at/intl/de/about/products/
+239994624: base url = https://https://www.blogger.com/
+239994624: curr url = https://https://www.blogger.com/?tab=wj
+231601920: URL response-code: 6
+231601920: --------------- Element not in CrawList -> add.
+231601920: base url = http://picasaweb.google.at/
+231601920: curr url = http://picasaweb.google.at/home?hl=de&tab=wq
+223209216: URL response-code: 6
+223209216: --------------- Element not in CrawList -> add.
+223209216: base url = http://video.google.at/
+223209216: curr url = http://video.google.at/?hl=de&tab=wv
+214816512: URL response-code: 0
+214816512: --------------- Element not in CrawList -> add.
+214816512: raw_data: http://www.google.at/webhp?hl=de&tab=pw
+214816512: raw_data: http://www.google.at/imghp?hl=de&tab=pi
+214816512: raw_data: http://maps.google.at/maps?hl=de&tab=pl
+214816512: raw_data: http://books.google.at/https://play.google.com/?hl=de&tab=p8
+214816512: raw_data: http://www.youtube.com/?hl=de&gl=AT&tab=p1
+214816512: raw_data: http://news.google.at/nwshp?hl=de&tab=pn
+214816512: raw_data: http://books.google.at/https://mail.google.com/mail/?tab=pm
+214816512: raw_data: http://books.google.at/https://drive.google.com/?tab=po
+214816512: raw_data: http://www.google.at/intl/de/options/
+214816512: raw_data: http://books.google.at/https://www.google.com/calendar?tab=pc
+214816512: raw_data: http://translate.google.at/?hl=de&tab=pT
+214816512: raw_data: http://books.google.at/bkshp?hl=de&tab=pp
+214816512: raw_data: http://www.blogger.com/?tab=pj
+214816512: raw_data: http://picasaweb.google.at/home?hl=de&tab=pq
+214816512: raw_data: http://video.google.at/?hl=de&tab=pv
+214816512: raw_data: http://www.google.at/intl/de/options/
+214816512: raw_data: https://www.google.com/accounts/Login?service=print&continue=http://books.google.at/books%3Fhl%3Dde&hl=de
+214816512: raw_data: http://www.google.at/preferences?hl=de
+214816512: raw_data: https://www.google.com/accounts/Login?service=print&continue=http://books.google.at/books%3Fop%3Dlibrary%26hl%3Dde%26ie%3DISO-8859-1&hl=de
+214816512: raw_data: http://books.google.at/support/bin/topic.py?topic=28528&hl=de-AT
+214816512: raw_data: http://books.google.at/advanced_book_search?hl=de&ie=ISO-8859-1
+214816512: raw_data: http://www.google.at/history/optout?hl=de
+214816512: raw_data: http://books.google.at/books?hl=de&ie=ISO-8859-1&source=gbs_hp_logo
+214816512: raw_data: http://books.google.at/advanced_book_search?hl=de&ie=ISO-8859-1
+214816512: raw_data: https://www.google.com/accounts/Login?service=print&continue=http://books.google.at/books%3Fhl%3Dde&hl=de
+214816512: base url = http://www.google.at/intl/de/options/
+214816512: curr url = http://www.google.at/intl/de/options/
+239994624: URL response-code: 6
+239994624: --------------- Element not in CrawList -> add.
+239994624: base url = https://https://accounts.google.com/ServiceLogin?hl=de&continue=https://www.google.at/
+239994624: curr url = https://https://accounts.google.com/ServiceLogin?hl=de&continue=https://www.google.at/
+231601920: URL response-code: 0
+231601920: --------------- Element not in CrawList -> add.
+231601920: raw_data: http://picasaweb.google.com/home?hl=de&amp;tab=wq
+231601920: base url = http://www.google.at/
+231601920: curr url = http://www.google.at/preferences?hl=de
+223209216: URL response-code: 0
+223209216: --------------- Element not in CrawList -> add.
+223209216: raw_data: http://www.google.at/videohp?hl=de
+223209216: base url = https:///
+223209216: curr url = https:///preferences?hl=de
+214816512: URL response-code: 0
+214816512: +++++++++++++++ Element is allready in CrawList.

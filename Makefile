@@ -2,17 +2,18 @@
 # Poschacher Michael - fhs33734
 # Slamanig Sebastian - fhs33741
 
-CXXFLAGS = -g -Wall -Weffc++ -lrt -pthread -lcurl -lboost_regex
+CXXFLAGS = -g -Wall -Weffc++ -std=c++0x
+LDFLAGS = -lrt -pthread -lcurl -lboost_regex
 CXX = g++
 OUT = WebCrawler.out
 
 all: webcrawler
 
 webcrawler: *.cpp
-	$(CXX) *.cpp $(CXXFLAGS) -o $(OUT)
+	$(CXX) *.cpp $(CXXFLAGS) $(LDFLAGS) -o $(OUT)
 
 mem: webcrawler
-	valgrind --tool=memcheck --leak-check=full ./$(OUT) http://multimediatechnology.at/~fhs33741/web-crawler/09bvqb9g90jemhx4s2y0.html 10 1
+	valgrind --tool=memcheck --leak-check=full --show-reachable=yes ./$(OUT) http://multimediatechnology.at/~fhs33741/web-crawler/09bvqb9g90jemhx4s2y0.html 10 1
 
 hel: webcrawler
 	valgrind --tool=helgrind ./$(OUT) http://multimediatechnology.at/~fhs33741/web-crawler/09bvqb9g90jemhx4s2y0.html 10 4

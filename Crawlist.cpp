@@ -9,60 +9,81 @@
 #include "Crawlist.h"
 #include <iostream>
 
+Crawlist::Crawlist(): m(PTHREAD_MUTEX_INITIALIZER), crawlist()
+{
+}
+
 Crawlist::~Crawlist()
 {
 }
 
 void Crawlist::add( CrawlistElement* element )
 {
+    pthread_mutex_lock(&m);
 	crawlist.push_back( *element );
+    pthread_mutex_unlock(&m);
 }
 
 bool Crawlist::exists( string url )
 {
-	for( vector<CrawlistElement>::iterator i = crawlist.begin(); i != crawlist.end(); ++i )
+    pthread_mutex_lock(&m);
+    bool found = false;
+	for( vector<CrawlistElement>::iterator i = crawlist.begin(); i != crawlist.end() && !found; ++i )
 	{
-		if( i->get_url() == url )
-			return true;
+		if( i->get_url() == url)
+			found = true;
 	}
-	return false;
+    pthread_mutex_unlock(&m);
+	return found;
 }
 
 unsigned Crawlist::get_good()
 {
+    pthread_mutex_lock(&m);
 	unsigned good = 0;
 	for( vector<CrawlistElement>::iterator i = crawlist.begin(); i != crawlist.end(); ++i )
 	 	good += (i->is_broken()) ? 0 : 1;
+    pthread_mutex_unlock(&m);
 	return good;
 }
 
 unsigned Crawlist::get_broken()
 {
+    pthread_mutex_lock(&m);
 	unsigned broken = 0;
 	for( vector<CrawlistElement>::iterator i = crawlist.begin(); i != crawlist.end(); ++i )
 	 	broken += (i->is_broken()) ? 1 : 0;
 
+    pthread_mutex_unlock(&m);
 	return broken;
 }
 
 unsigned Crawlist::get_total()
 {
-	return crawlist.size();
+    pthread_mutex_lock(&m);
+	unsigned s =crawlist.size();
+    pthread_mutex_unlock(&m);
+    return s;
 }
 
 CrawlistElement* Crawlist::get_element( string url )
 {
-	for( vector<CrawlistElement>::iterator i = crawlist.begin(); i != crawlist.end(); ++i )
-		if( i->get_url() == url ) return &(*i);
-	
-	return NULL;
+    pthread_mutex_lock(&m);
+	CrawlistElement* elem = NULL;
+	for( vector<CrawlistElement>::iterator i = crawlist.begin(); i != crawlist.end() && elem != NULL; ++i )
+		if( i->get_url() == url ) elem = &(*i);
+
+    pthread_mutex_unlock(&m);
+	return elem;
 }
 
 void Crawlist::print()
 {
+    pthread_mutex_lock(&m);
 	cout << "URL\tBroken\tCounter\tAVG-load-time\tMAX-load-time" << endl;
 	for( vector<CrawlistElement>::iterator i = crawlist.begin(); i != crawlist.end(); ++i )
 	{
 		cout << i->get_url() << "\t" << ( i->is_broken() ? "broken" : "good" ) << "\t" << i->get_count() << "\t" << i->get_avg_load_time() << "\t" << i->get_max_load_time() << endl;
 	}
+    pthread_mutex_unlock(&m);
 }

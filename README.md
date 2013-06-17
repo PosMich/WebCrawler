@@ -19,3 +19,58 @@ UML:
 
 
 Falls es Probleme gibt beim Öffnen der Links, bitte Mail an michael.poschacher@gmail.com
+
+
+
+Ausführen:
+	./WebCrawler.out url iterations threads
+
+	z.B: http://multimediatechnology.at/~fhs33741/web-crawler/09bvqb9g90jemhx4s2y0.html 10000 4
+
+Builden:
+	make
+
+Valgrind:
+	make mem
+
+Helgrind:
+	make hel
+
+Testfälle:
+	Startseite:
+		http://multimediatechnology.at/~fhs33741/web-crawler/09bvqb9g90jemhx4s2y0.html
+	Iterationen:
+		10000
+
+	Links:
+		Good:   100
+		Broken: 672
+
+	make run1 --> 1 thread 
+	make run2 --> 2 threads 
+	make run4 --> 4 threads  
+	make run8 --> 8 threads
+
+
+	Startseite:
+		http://multimediatechnology.at/~fhs33741/webcrawler-fail/4cnaa0fpw4ri16uszl6g.html
+	Iterationen:
+		10000
+	
+	Links:
+		Good:	10
+		Broken: 59
+
+	make fail1 --> 1 thread
+	make fail2 --> 2 threads
+	make fail4 --> 4 threads
+	make fail8 --> 8 threads
+
+Einschränkungen:
+	Cookies, Redirects werden nicht unterstützt.
+
+	Auf Grund von Memory Leaks von curl ist SSL deaktiviert ( CURL_GLOBAL_NOTHING durch CURL_GLOBAL_ALL ersetzen aktiviert zwar ssl support, aber auch memory leaks  bzw. reachable memory )
+
+Ausgaben:
+	Es wird nach Ablauf der Iterationen bzw. wenn alle Urls besucht wurden eine Statistik mit folgenden Werten ausgegeben:
+	URL BROKEN? VISIT_COUNTER AVG_LOADTIME MAX_LOADTIME

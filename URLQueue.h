@@ -17,7 +17,7 @@ using namespace std;
 
 class URLQueue {
     public:
-        URLQueue( unsigned v_num_of_threads ) : operators( v_num_of_threads ) {}
+        URLQueue( unsigned v_num_of_threads ) :mutex(PTHREAD_MUTEX_INITIALIZER), cond(PTHREAD_COND_INITIALIZER), terminate(false), q(), operators( v_num_of_threads ) {}
         ~URLQueue(){}
         void append(const string &x);
         string get();
@@ -27,9 +27,9 @@ class URLQueue {
     private:
         mutable pthread_mutex_t mutex;
         mutable pthread_cond_t cond;
-        bool terminate = false;
+        bool terminate;
         deque<string> q;
-        unsigned operators = 0;
+        unsigned operators;
 };
 
 #endif

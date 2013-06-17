@@ -38,9 +38,9 @@ size_t writeToString(void *ptr, size_t size, size_t count, void *stream)
     return size* count;
 }
 
-double diffTime( timespec* start, timespec* end ) 
+double diffTime( timespec* start, timespec* end )
 {
-   return ( end->tv_sec + (double) end->tv_nsec/10000000000 ) 
+   return ( end->tv_sec + (double) end->tv_nsec/10000000000 )
              - ( start->tv_sec + (double) start->tv_nsec/10000000000 );
 }
 
@@ -48,7 +48,7 @@ double diffTime( timespec* start, timespec* end )
 void *workerFunc( void *arg )
 {
 
-    cout << "Thread with id: " << pthread_self() << " is running." << endl;
+    //cout << "Thread with id: " << pthread_self() << " is running." << endl;
 
     // unsigned curr_thread = (unsigned) arg;
 
@@ -72,17 +72,24 @@ void *workerFunc( void *arg )
     curl_easy_setopt( curl_handle, CURLOPT_WRITEDATA, &data );
     curl_easy_setopt( curl_handle, CURLOPT_FAILONERROR, true );
 
-    while( iterations > 0 )
+
+    pthread_mutex_lock( &m_iterations );
+    unsigned my_iterations = iterations;
+    pthread_mutex_unlock( &m_iterations );
+
+    while( my_iterations > 0 )
     {
         pthread_mutex_lock( &m_iterations );
-            iterations--;
+            if (iterations > 0)
+                iterations--;
+            my_iterations = iterations;
         pthread_mutex_unlock( &m_iterations );
 
         curr_url = urls->get();
 
         if( curr_url == "" )
         {
-            cout << "Thread " << pthread_self() << " exits." << endl;
+            //cout << "Thread " << pthread_self() << " exits." << endl;
             curl_easy_cleanup( curl_handle );
             pthread_exit(NULL);
         }
@@ -108,13 +115,13 @@ void *workerFunc( void *arg )
     cout << pthread_self() << ": base url = " << base_url << endl;
     cout << pthread_self() << ": curr url = " << curr_url << endl;
 #endif
-        
+
         curl_easy_setopt( curl_handle, CURLOPT_URL, curr_url.c_str() );
 
         clock_gettime(CLOCK_MONOTONIC, &time_start);
             code = curl_easy_perform( curl_handle );
         clock_gettime(CLOCK_MONOTONIC, &time_end);
-        
+
 #ifdef DEBUG
         cout << pthread_self() << ": URL response-code: " << code << endl;
 #endif
@@ -134,7 +141,7 @@ void *workerFunc( void *arg )
 
 #ifdef DEBUG
         cout << pthread_self() << ": --------------- Element not in CrawList -> add." << endl;
-#endif      
+#endif
 
             if ( code == 0 )
             {
@@ -185,7 +192,7 @@ void *workerFunc( void *arg )
 int main( int argc, const char* argv[] )
 {
     string start_point;
-    curl_global_init( CURL_GLOBAL_ALL );
+    curl_global_init( CURL_GLOBAL_NOTHING );
 
     /*
         args:
@@ -251,6 +258,8 @@ int main( int argc, const char* argv[] )
     cout << "Total Links found: " << crawlist->get_total() << endl << endl;
     cout << "************** Details **************" << endl;
     crawlist->print();
+
+    curl_global_cleanup();
 
     delete crawlist;
     delete urls;
