@@ -38,19 +38,19 @@ boost::regex e("<\\s*A\\s+[^>]*href\\s*=\\s*\"([^\"]*)\"", boost::regex::normal 
 
 size_t writeToString(void *ptr, size_t size, size_t count, void *stream)
 {
-    pthread_mutex_lock(&rw_lock);
+    //pthread_mutex_lock(&rw_lock);
     ((string*)stream)->append((char*)ptr, 0, size* count);
     size_t ret = count;
-    pthread_mutex_unlock(&rw_lock);
+    //pthread_mutex_unlock(&rw_lock);
     return size* ret;
 }
 
 double diffTime( timespec* start, timespec* end )
 {
-    pthread_mutex_lock(&time_lock);
+    //pthread_mutex_lock(&time_lock);
     double ret = ( end->tv_sec + (double) end->tv_nsec/10000000000 )
              - ( start->tv_sec + (double) start->tv_nsec/10000000000 );
-    pthread_mutex_unlock(&time_lock);
+    //pthread_mutex_unlock(&time_lock);
     return ret;
 }
 
@@ -70,7 +70,7 @@ void *workerFunc( void *arg )
     size_t found;
     unsigned slash_pos = 0;
 
-    CrawlistElement *elem = NULL;
+    //CrawlistElement *elem = NULL;
     string data;
     string raw_data;
 
@@ -157,11 +157,8 @@ void *workerFunc( void *arg )
 #ifdef DEBUG
                 cout << "create new CrawlistElement" << endl;
 #endif
-                elem = new CrawlistElement( curr_url, false );
-                elem->add_load_time( diffTime( &time_start, &time_end) );
-                elem->increase_counter();
-                crawlist->add( elem );
-                delete elem;
+
+                crawlist->add( curr_url, diffTime( &time_start, &time_end), false);
 
                 pthread_mutex_lock(&m_regex);
                 boost::regex_split(front_inserter(raw_urls), data, e);
@@ -179,7 +176,7 @@ void *workerFunc( void *arg )
                     //      absolut: wenn letzte Stelle keine "/" -> dransparxXxen und in "urls" front pushen
                     //      relativ: an "base-url" dransparxXxen -> in "urls" front pushen
 
-                    if( raw_data.find( "http://" ) == string::npos )
+                    if( raw_data.find( "://" ) == string::npos )
                         raw_data.insert( 0, base_url );
 
                     urls->append( raw_data );
@@ -192,11 +189,7 @@ void *workerFunc( void *arg )
             }
             else
             {
-                elem = new CrawlistElement( curr_url, true );
-                elem->add_load_time( diffTime( &time_start, &time_end) );
-                elem->increase_counter();
-                crawlist->add( elem );
-                delete elem;
+                crawlist->add( curr_url, diffTime( &time_start, &time_end), true);
             }
         }
     }
@@ -207,7 +200,7 @@ void *workerFunc( void *arg )
 int main( int argc, const char* argv[] )
 {
     string start_point;
-    curl_global_init( CURL_GLOBAL_NOTHING );
+    curl_global_init( CURL_GLOBAL_ALL );
 
     /*
         args:
@@ -227,11 +220,9 @@ int main( int argc, const char* argv[] )
     num_of_threads = atoi(argv[3]);
 
 
-#ifdef DEBUG
     cout << "start_point: " << start_point << endl;
     cout << "iterations: " << iterations << endl;
     cout << "threads: " << num_of_threads << endl;
-#endif
 
 /*
     start-URL http://multimediatechnology.at/~fhs33741/web-crawler/0a6x0q2qk9ecjr0vbxrs.html

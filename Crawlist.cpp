@@ -17,11 +17,28 @@ Crawlist::~Crawlist()
 {
 }
 
-void Crawlist::add( CrawlistElement* element )
+void Crawlist::add( string url, double time, bool broken)
 {
     pthread_mutex_lock(&m);
-	crawlist.push_back( *element );
-    pthread_mutex_unlock(&m);
+    for( vector<CrawlistElement>::iterator i = crawlist.begin(); i != crawlist.end(); ++i )
+    {
+        if( i->get_url() == url )
+        {
+            i->add_load_time( time );
+            i->increase_counter();
+            pthread_mutex_unlock(&m);
+            return;
+        }
+    }
+
+    CrawlistElement* elem = new CrawlistElement( url, broken );
+    elem->add_load_time( time );
+    elem->increase_counter();
+    crawlist.push_back( *elem );
+    delete elem;
+	pthread_mutex_unlock(&m);
+
+    return;
 }
 
 bool Crawlist::exists( string url )

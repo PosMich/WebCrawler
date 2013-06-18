@@ -21,7 +21,7 @@ class Crawlist
 		Crawlist();
 		~Crawlist();
 
-		void add( CrawlistElement* element );
+		void add( string url, double time, bool broken );
 
 		bool exists( string url );
 
