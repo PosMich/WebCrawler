@@ -6,7 +6,7 @@
  *                               *
  *********************************/
 
-#define DEBUG
+#define nDEBUG
 
 #include <stdio.h>
 #include <iostream>
@@ -163,7 +163,6 @@ void *workerFunc( void *arg )
                 crawlist->add( elem );
                 delete elem;
 
-                cout << "regex" << endl;
                 pthread_mutex_lock(&m_regex);
                 boost::regex_split(front_inserter(raw_urls), data, e);
                 pthread_mutex_unlock(&m_regex);

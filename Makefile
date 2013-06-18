@@ -13,10 +13,10 @@ webcrawler: *.cpp
 	$(CXX) *.cpp $(CXXFLAGS) $(LDFLAGS) -o $(OUT)
 
 mem: webcrawler
-	valgrind --tool=memcheck --leak-check=full --show-reachable=yes ./$(OUT) http://multimediatechnology.at/~fhs33741/web-crawler/09bvqb9g90jemhx4s2y0.html 10 1
+	valgrind --tool=memcheck --leak-check=full --show-reachable=yes ./$(OUT) http://multimediatechnology.at/~fhs33741/web-crawler/09bvqb9g90jemhx4s2y0.html 100 4
 
 hel: webcrawler
-	valgrind --tool=helgrind ./$(OUT) http://multimediatechnology.at/~fhs33741/web-crawler/09bvqb9g90jemhx4s2y0.html 10 4
+	valgrind --tool=helgrind ./$(OUT) http://multimediatechnology.at/~fhs33741/web-crawler/09bvqb9g90jemhx4s2y0.html 100 4
 
 clean:
 	rm $(OUT) out/* -rf
