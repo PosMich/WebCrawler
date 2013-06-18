@@ -21,12 +21,12 @@ class URLQueue {
         ~URLQueue(){}
         void append(const string &x);
         string get();
-        unsigned int size() const;
+        unsigned int size();
         void set_operators( unsigned v_num_of_threads );
 
     private:
-        mutable pthread_mutex_t mutex;
-        mutable pthread_cond_t cond;
+        pthread_mutex_t mutex;
+        pthread_cond_t cond;
         bool terminate;
         deque<string> q;
         unsigned operators;

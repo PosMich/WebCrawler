@@ -29,7 +29,9 @@ class Crawlist
 		unsigned get_broken();
 		unsigned get_total();
 
-		CrawlistElement* get_element( string url );
+		//CrawlistElement get_element( string url );
+		void incr_counter( string url );
+		void add_load_time( string url, double time );
 
 		void print();
 

@@ -6,7 +6,7 @@
  *                               *
  *********************************/
 
-#define nDEBUG
+#define DEBUG
 
 #include <stdio.h>
 #include <iostream>
@@ -27,6 +27,10 @@ unsigned num_of_threads = 4;
 Crawlist *crawlist = new Crawlist();
 
 static pthread_mutex_t m_iterations = PTHREAD_MUTEX_INITIALIZER;
+static pthread_mutex_t m_regex = PTHREAD_MUTEX_INITIALIZER;
+static pthread_mutex_t rw_lock = PTHREAD_MUTEX_INITIALIZER;
+static pthread_mutex_t time_lock = PTHREAD_MUTEX_INITIALIZER;
+
 
 URLQueue *urls = new URLQueue(4);
 
@@ -34,14 +38,20 @@ boost::regex e("<\\s*A\\s+[^>]*href\\s*=\\s*\"([^\"]*)\"", boost::regex::normal 
 
 size_t writeToString(void *ptr, size_t size, size_t count, void *stream)
 {
+    pthread_mutex_lock(&rw_lock);
     ((string*)stream)->append((char*)ptr, 0, size* count);
-    return size* count;
+    size_t ret = count;
+    pthread_mutex_unlock(&rw_lock);
+    return size* ret;
 }
 
 double diffTime( timespec* start, timespec* end )
 {
-   return ( end->tv_sec + (double) end->tv_nsec/10000000000 )
+    pthread_mutex_lock(&time_lock);
+    double ret = ( end->tv_sec + (double) end->tv_nsec/10000000000 )
              - ( start->tv_sec + (double) start->tv_nsec/10000000000 );
+    pthread_mutex_unlock(&time_lock);
+    return ret;
 }
 
 // BRUM BRUM BRUM
@@ -131,9 +141,8 @@ void *workerFunc( void *arg )
 #ifdef DEBUG
         cout << pthread_self() << ": +++++++++++++++ Element is allready in CrawList." << endl;
 #endif
-            elem = crawlist->get_element( curr_url );
-            elem->increase_counter();
-            elem->add_load_time( diffTime( &time_start, &time_end) );
+
+            crawlist->add_load_time( curr_url, diffTime( &time_start, &time_end) );
 
         }
         else
@@ -145,14 +154,21 @@ void *workerFunc( void *arg )
 
             if ( code == 0 )
             {
-
+#ifdef DEBUG
+                cout << "create new CrawlistElement" << endl;
+#endif
                 elem = new CrawlistElement( curr_url, false );
                 elem->add_load_time( diffTime( &time_start, &time_end) );
                 elem->increase_counter();
                 crawlist->add( elem );
                 delete elem;
 
+                cout << "regex" << endl;
+                pthread_mutex_lock(&m_regex);
                 boost::regex_split(front_inserter(raw_urls), data, e);
+                pthread_mutex_unlock(&m_regex);
+
+
 
                 while(raw_urls.size())
                 {

@@ -66,7 +66,39 @@ unsigned Crawlist::get_total()
     return s;
 }
 
-CrawlistElement* Crawlist::get_element( string url )
+void Crawlist::incr_counter( string url )
+{
+    pthread_mutex_lock(&m);
+    bool found = false;
+    for( vector<CrawlistElement>::iterator i = crawlist.begin(); i != crawlist.end() && !found; ++i )
+    {
+        if (i->get_url() == url)
+        {
+            found = true;
+            i->increase_counter();
+        }
+    }
+    pthread_mutex_unlock(&m);
+}
+
+void Crawlist::add_load_time( string url, double time )
+{
+    pthread_mutex_lock(&m);
+    bool found = false;
+    for( vector<CrawlistElement>::iterator i = crawlist.begin(); i != crawlist.end() && !found; ++i )
+    {
+        if (i->get_url() == url)
+        {
+            found = true;
+            i->increase_counter();
+            i->add_load_time( time );
+        }
+    }
+    pthread_mutex_unlock(&m);
+}
+
+/*
+CrawlistElement Crawlist::get_element( string url )
 {
     pthread_mutex_lock(&m);
 	CrawlistElement* elem = NULL;
@@ -74,8 +106,9 @@ CrawlistElement* Crawlist::get_element( string url )
 		if( i->get_url() == url ) elem = &(*i);
 
     pthread_mutex_unlock(&m);
-	return elem;
+	return *elem;
 }
+*/
 
 void Crawlist::print()
 {

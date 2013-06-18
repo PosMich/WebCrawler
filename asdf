@@ -1,0 +1,667 @@
+==4547== Memcheck, a memory error detector
+==4547== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
+==4547== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
+==4547== Command: ./WebCrawler.out http://multimediatechnology.at/~fhs33741/web-crawler/09bvqb9g90jemhx4s2y0.html 2000 4
+==4547== 
+==4547== 
+==4547== HEAP SUMMARY:
+==4547==     in use at exit: 324,676 bytes in 1,365 blocks
+==4547==   total heap usage: 11,007 allocs, 9,642 frees, 1,568,655 bytes allocated
+==4547== 
+==4547== 3 bytes in 3 blocks are still reachable in loss record 1 of 60
+==4547==    at 0x4C2B6CD: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x5D55D81: strdup (strdup.c:43)
+==4547==    by 0x505710C: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x505C828: Curl_connect (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5063AF0: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x408A5D: workerFunc(void*) (WebCrawler.cpp:132)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 3 bytes in 3 blocks are still reachable in loss record 2 of 60
+==4547==    at 0x4C2B6CD: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x5D55D81: strdup (strdup.c:43)
+==4547==    by 0x5057128: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x505C828: Curl_connect (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5063AF0: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x408A5D: workerFunc(void*) (WebCrawler.cpp:132)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 16 bytes in 1 blocks are still reachable in loss record 3 of 60
+==4547==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x532BBEB: boost::re_detail::regex_data<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::regex_data() (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x532BFF7: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::do_assign(char const*, char const*, unsigned int) (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x40A7A3: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, char const*, unsigned int) (basic_regex.hpp:379)
+==4547==    by 0x409F4C: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, unsigned int) (basic_regex.hpp:364)
+==4547==    by 0x409BF9: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::basic_regex(char const*, unsigned int) (basic_regex.hpp:333)
+==4547==    by 0x409467: __static_initialization_and_destruction_0(int, int) (WebCrawler.cpp:37)
+==4547==    by 0x4094C8: _GLOBAL__sub_I_total_time_start (WebCrawler.cpp:284)
+==4547==    by 0x40DBAC: __libc_csu_init (in /media/share/Dropbox/Dropbox/FH/4_SS_2013/ErweiterteKonzepte/fhs33734/adv-prog12/aufgabe11/WebCrawler.out)
+==4547==    by 0x5CEE6FF: (below main) (libc-start.c:185)
+==4547== 
+==4547== 20 bytes in 4 blocks are still reachable in loss record 4 of 60
+==4547==    at 0x4C2B6CD: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x5D55D81: strdup (strdup.c:43)
+==4547==    by 0x505592E: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x505631C: Curl_init_userdefined (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x50563D5: Curl_open (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x50644F9: curl_easy_init (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x4087E0: workerFunc(void*) (WebCrawler.cpp:80)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 24 bytes in 1 blocks are still reachable in loss record 5 of 60
+==4547==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x532B5B7: boost::object_cache<boost::re_detail::cpp_regex_traits_base<char>, boost::re_detail::cpp_regex_traits_implementation<char> >::do_get(boost::re_detail::cpp_regex_traits_base<char> const&, unsigned long) (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x531B01F: ??? (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x532BC27: boost::re_detail::regex_data<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::regex_data() (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x532BFF7: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::do_assign(char const*, char const*, unsigned int) (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x40A7A3: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, char const*, unsigned int) (basic_regex.hpp:379)
+==4547==    by 0x409F4C: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, unsigned int) (basic_regex.hpp:364)
+==4547==    by 0x409BF9: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::basic_regex(char const*, unsigned int) (basic_regex.hpp:333)
+==4547==    by 0x409467: __static_initialization_and_destruction_0(int, int) (WebCrawler.cpp:37)
+==4547==    by 0x4094C8: _GLOBAL__sub_I_total_time_start (WebCrawler.cpp:284)
+==4547==    by 0x40DBAC: __libc_csu_init (in /media/share/Dropbox/Dropbox/FH/4_SS_2013/ErweiterteKonzepte/fhs33734/adv-prog12/aufgabe11/WebCrawler.out)
+==4547==    by 0x5CEE6FF: (below main) (libc-start.c:185)
+==4547== 
+==4547== 24 bytes in 1 blocks are still reachable in loss record 6 of 60
+==4547==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x532BC4F: boost::re_detail::regex_data<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::regex_data() (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x532BFF7: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::do_assign(char const*, char const*, unsigned int) (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x40A7A3: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, char const*, unsigned int) (basic_regex.hpp:379)
+==4547==    by 0x409F4C: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, unsigned int) (basic_regex.hpp:364)
+==4547==    by 0x409BF9: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::basic_regex(char const*, unsigned int) (basic_regex.hpp:333)
+==4547==    by 0x409467: __static_initialization_and_destruction_0(int, int) (WebCrawler.cpp:37)
+==4547==    by 0x4094C8: _GLOBAL__sub_I_total_time_start (WebCrawler.cpp:284)
+==4547==    by 0x40DBAC: __libc_csu_init (in /media/share/Dropbox/Dropbox/FH/4_SS_2013/ErweiterteKonzepte/fhs33734/adv-prog12/aufgabe11/WebCrawler.out)
+==4547==    by 0x5CEE6FF: (below main) (libc-start.c:185)
+==4547== 
+==4547== 24 bytes in 1 blocks are still reachable in loss record 7 of 60
+==4547==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x532C015: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::do_assign(char const*, char const*, unsigned int) (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x40A7A3: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, char const*, unsigned int) (basic_regex.hpp:379)
+==4547==    by 0x409F4C: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, unsigned int) (basic_regex.hpp:364)
+==4547==    by 0x409BF9: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::basic_regex(char const*, unsigned int) (basic_regex.hpp:333)
+==4547==    by 0x409467: __static_initialization_and_destruction_0(int, int) (WebCrawler.cpp:37)
+==4547==    by 0x4094C8: _GLOBAL__sub_I_total_time_start (WebCrawler.cpp:284)
+==4547==    by 0x40DBAC: __libc_csu_init (in /media/share/Dropbox/Dropbox/FH/4_SS_2013/ErweiterteKonzepte/fhs33734/adv-prog12/aufgabe11/WebCrawler.out)
+==4547==    by 0x5CEE6FF: (below main) (libc-start.c:185)
+==4547== 
+==4547== 24 bytes in 1 blocks are still reachable in loss record 8 of 60
+==4547==    at 0x4C29DB4: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x504D6E2: Curl_http (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x505CBB7: Curl_do (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5063B66: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x408A5D: workerFunc(void*) (WebCrawler.cpp:132)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 40 bytes in 1 blocks are still reachable in loss record 9 of 60
+==4547==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x532B611: boost::object_cache<boost::re_detail::cpp_regex_traits_base<char>, boost::re_detail::cpp_regex_traits_implementation<char> >::do_get(boost::re_detail::cpp_regex_traits_base<char> const&, unsigned long) (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x531B01F: ??? (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x532BC27: boost::re_detail::regex_data<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::regex_data() (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x532BFF7: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::do_assign(char const*, char const*, unsigned int) (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x40A7A3: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, char const*, unsigned int) (basic_regex.hpp:379)
+==4547==    by 0x409F4C: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, unsigned int) (basic_regex.hpp:364)
+==4547==    by 0x409BF9: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::basic_regex(char const*, unsigned int) (basic_regex.hpp:333)
+==4547==    by 0x409467: __static_initialization_and_destruction_0(int, int) (WebCrawler.cpp:37)
+==4547==    by 0x4094C8: _GLOBAL__sub_I_total_time_start (WebCrawler.cpp:284)
+==4547==    by 0x40DBAC: __libc_csu_init (in /media/share/Dropbox/Dropbox/FH/4_SS_2013/ErweiterteKonzepte/fhs33734/adv-prog12/aufgabe11/WebCrawler.out)
+==4547==    by 0x5CEE6FF: (below main) (libc-start.c:185)
+==4547== 
+==4547== 64 bytes in 1 blocks are still reachable in loss record 10 of 60
+==4547==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x409420: __static_initialization_and_destruction_0(int, int) (WebCrawler.cpp:27)
+==4547==    by 0x4094C8: _GLOBAL__sub_I_total_time_start (WebCrawler.cpp:284)
+==4547==    by 0x40DBAC: __libc_csu_init (in /media/share/Dropbox/Dropbox/FH/4_SS_2013/ErweiterteKonzepte/fhs33734/adv-prog12/aufgabe11/WebCrawler.out)
+==4547==    by 0x5CEE6FF: (below main) (libc-start.c:185)
+==4547== 
+==4547== 64 bytes in 4 blocks are still reachable in loss record 11 of 60
+==4547==    at 0x4C2B6CD: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x50759AD: Curl_getaddrinfo_ex (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x506F95E: Curl_getaddrinfo (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5046E74: Curl_resolv (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x50470DF: Curl_resolv_timeout (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5058575: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x505C828: Curl_connect (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5063AF0: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x408A5D: workerFunc(void*) (WebCrawler.cpp:132)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 72 bytes in 1 blocks are still reachable in loss record 12 of 60
+==4547==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x5329CD6: std::_Rb_tree<boost::re_detail::cpp_regex_traits_base<char>, std::pair<boost::re_detail::cpp_regex_traits_base<char> const, std::_List_iterator<std::pair<boost::shared_ptr<boost::re_detail::cpp_regex_traits_implementation<char> const>, boost::re_detail::cpp_regex_traits_base<char> const*> > >, std::_Select1st<std::pair<boost::re_detail::cpp_regex_traits_base<char> const, std::_List_iterator<std::pair<boost::shared_ptr<boost::re_detail::cpp_regex_traits_implementation<char> const>, boost::re_detail::cpp_regex_traits_base<char> const*> > > >, std::less<boost::re_detail::cpp_regex_traits_base<char> >, std::allocator<std::pair<boost::re_detail::cpp_regex_traits_base<char> const, std::_List_iterator<std::pair<boost::shared_ptr<boost::re_detail::cpp_regex_traits_implementation<char> const>, boost::re_detail::cpp_regex_traits_base<char> const*> > > > >::_M_insert_(std::_Rb_tree_node_base const*, std::_Rb_tree_node_base const*, std::pair<boost::re_detail::cpp_regex_traits_base<char> const, std::_List_iterator<std::pair<boost::shared_ptr<boost::re_detail::cpp_regex_traits_implementation<char> const>, boost::re_detail::cpp_regex_traits_base<char> const*> > > const&) (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x5329ECF: std::_Rb_tree<boost::re_detail::cpp_regex_traits_base<char>, std::pair<boost::re_detail::cpp_regex_traits_base<char> const, std::_List_iterator<std::pair<boost::shared_ptr<boost::re_detail::cpp_regex_traits_implementation<char> const>, boost::re_detail::cpp_regex_traits_base<char> const*> > >, std::_Select1st<std::pair<boost::re_detail::cpp_regex_traits_base<char> const, std::_List_iterator<std::pair<boost::shared_ptr<boost::re_detail::cpp_regex_traits_implementation<char> const>, boost::re_detail::cpp_regex_traits_base<char> const*> > > >, std::less<boost::re_detail::cpp_regex_traits_base<char> >, std::allocator<std::pair<boost::re_detail::cpp_regex_traits_base<char> const, std::_List_iterator<std::pair<boost::shared_ptr<boost::re_detail::cpp_regex_traits_implementation<char> const>, boost::re_detail::cpp_regex_traits_base<char> const*> > > > >::_M_insert_unique(std::pair<boost::re_detail::cpp_regex_traits_base<char> const, std::_List_iterator<std::pair<boost::shared_ptr<boost::re_detail::cpp_regex_traits_implementation<char> const>, boost::re_detail::cpp_regex_traits_base<char> const*> > > const&) (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x532B71A: boost::object_cache<boost::re_detail::cpp_regex_traits_base<char>, boost::re_detail::cpp_regex_traits_implementation<char> >::do_get(boost::re_detail::cpp_regex_traits_base<char> const&, unsigned long) (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x531B01F: ??? (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x532BC27: boost::re_detail::regex_data<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::regex_data() (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x532BFF7: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::do_assign(char const*, char const*, unsigned int) (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x40A7A3: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, char const*, unsigned int) (basic_regex.hpp:379)
+==4547==    by 0x409F4C: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, unsigned int) (basic_regex.hpp:364)
+==4547==    by 0x409BF9: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::basic_regex(char const*, unsigned int) (basic_regex.hpp:333)
+==4547==    by 0x409467: __static_initialization_and_destruction_0(int, int) (WebCrawler.cpp:37)
+==4547==    by 0x4094C8: _GLOBAL__sub_I_total_time_start (WebCrawler.cpp:284)
+==4547== 
+==4547== 84 bytes in 3 blocks are still reachable in loss record 13 of 60
+==4547==    at 0x4C2B6CD: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x7CFF173: __libc_res_nsend (res_send.c:441)
+==4547==    by 0x7CFC104: __libc_res_nquery (res_query.c:226)
+==4547==    by 0x7CFC6C4: __libc_res_nquerydomain (res_query.c:578)
+==4547==    by 0x7CFCB13: __libc_res_nsearch (res_query.c:378)
+==4547==    by 0xE8F4C7C: ???
+==4547==    by 0x5D98935: gaih_inet (getaddrinfo.c:940)
+==4547==    by 0x5D9B99D: getaddrinfo (getaddrinfo.c:2423)
+==4547==    by 0x50758E1: Curl_getaddrinfo_ex (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x506F95E: Curl_getaddrinfo (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5046E74: Curl_resolv (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x50470DF: Curl_resolv_timeout (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547== 
+==4547== 96 bytes in 3 blocks are still reachable in loss record 14 of 60
+==4547==    at 0x4C2B6CD: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x5069851: Curl_llist_alloc (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x50569FB: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x505C828: Curl_connect (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5063AF0: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x408A5D: workerFunc(void*) (WebCrawler.cpp:132)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 96 bytes in 3 blocks are still reachable in loss record 15 of 60
+==4547==    at 0x4C2B6CD: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x5069851: Curl_llist_alloc (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5056A0E: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x505C828: Curl_connect (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5063AF0: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x408A5D: workerFunc(void*) (WebCrawler.cpp:132)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 96 bytes in 3 blocks are still reachable in loss record 16 of 60
+==4547==    at 0x4C2B6CD: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x5069851: Curl_llist_alloc (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5056A21: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x505C828: Curl_connect (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5063AF0: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x408A5D: workerFunc(void*) (WebCrawler.cpp:132)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 96 bytes in 3 blocks are still reachable in loss record 17 of 60
+==4547==    at 0x4C2B6CD: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x5069851: Curl_llist_alloc (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5056A34: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x505C828: Curl_connect (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5063AF0: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x408A5D: workerFunc(void*) (WebCrawler.cpp:132)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 96 bytes in 3 blocks are still reachable in loss record 18 of 60
+==4547==    at 0x4C2B6CD: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x505D9F5: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x505DFAF: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x505F0F6: curl_maprintf (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x504DCE9: Curl_http (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x505CBB7: Curl_do (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5063B66: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x408A5D: workerFunc(void*) (WebCrawler.cpp:132)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 96 bytes in 4 blocks are still reachable in loss record 19 of 60
+==4547==    at 0x4C29DB4: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x50560B5: Curl_mk_connc (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x506465D: curl_easy_perform (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x408A5D: workerFunc(void*) (WebCrawler.cpp:132)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 96 bytes in 4 blocks are still reachable in loss record 20 of 60
+==4547==    at 0x4C29DB4: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x5046C5D: Curl_cache_addr (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5046EA8: Curl_resolv (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x50470DF: Curl_resolv_timeout (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5058575: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x505C828: Curl_connect (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5063AF0: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x408A5D: workerFunc(void*) (WebCrawler.cpp:132)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 96 bytes in 4 blocks are still reachable in loss record 21 of 60
+==4547==    at 0x4C2B6CD: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x5069E02: Curl_hash_add (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5046C93: Curl_cache_addr (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5046EA8: Curl_resolv (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x50470DF: Curl_resolv_timeout (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5058575: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x505C828: Curl_connect (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5063AF0: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x408A5D: workerFunc(void*) (WebCrawler.cpp:132)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 96 bytes in 4 blocks are still reachable in loss record 22 of 60
+==4547==    at 0x4C2B6CD: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x50698A9: Curl_llist_insert_next (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5069E4D: Curl_hash_add (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5046C93: Curl_cache_addr (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5046EA8: Curl_resolv (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x50470DF: Curl_resolv_timeout (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5058575: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x505C828: Curl_connect (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5063AF0: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x408A5D: workerFunc(void*) (WebCrawler.cpp:132)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 96 bytes in 4 blocks are still reachable in loss record 23 of 60
+==4547==    at 0x4C2B6CD: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x5D55D81: strdup (strdup.c:43)
+==4547==    by 0x504D048: Curl_http (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x505CBB7: Curl_do (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5063B66: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x408A5D: workerFunc(void*) (WebCrawler.cpp:132)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 103 bytes in 1 blocks are possibly lost in loss record 24 of 60
+==4547==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x5638A88: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16)
+==4547==    by 0x5638C79: std::string::_M_mutate(unsigned long, unsigned long, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16)
+==4547==    by 0x5638E1B: std::string::_M_replace_safe(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16)
+==4547==    by 0x409039: main (WebCrawler.cpp:226)
+==4547== 
+==4547== 103 bytes in 1 blocks are possibly lost in loss record 25 of 60
+==4547==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x5638A88: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16)
+==4547==    by 0x563A494: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16)
+==4547==    by 0x563A5E2: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16)
+==4547==    by 0x406668: URLQueue::append(std::string const&) (URLQueue.cpp:22)
+==4547==    by 0x40917D: main (WebCrawler.cpp:258)
+==4547== 
+==4547== 105 bytes in 3 blocks are still reachable in loss record 26 of 60
+==4547==    at 0x4C2B6CD: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x5D55D81: strdup (strdup.c:43)
+==4547==    by 0x5071DBE: Curl_clone_ssl_config (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x50571EA: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x505C828: Curl_connect (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5063AF0: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x408A5D: workerFunc(void*) (WebCrawler.cpp:132)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 108 bytes in 4 blocks are still reachable in loss record 27 of 60
+==4547==    at 0x4C2B6CD: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x5069E16: Curl_hash_add (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5046C93: Curl_cache_addr (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5046EA8: Curl_resolv (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x50470DF: Curl_resolv_timeout (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5058575: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x505C828: Curl_connect (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5063AF0: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x408A5D: workerFunc(void*) (WebCrawler.cpp:132)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 140 bytes in 4 blocks are still reachable in loss record 28 of 60
+==4547==    at 0x4C2B6CD: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x5D55D81: strdup (strdup.c:43)
+==4547==    by 0x505592E: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x505633A: Curl_init_userdefined (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x50563D5: Curl_open (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x50644F9: curl_easy_init (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x4087E0: workerFunc(void*) (WebCrawler.cpp:80)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 160 bytes in 4 blocks are still reachable in loss record 29 of 60
+==4547==    at 0x4C29DB4: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x50560C9: Curl_mk_connc (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x506465D: curl_easy_perform (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x408A5D: workerFunc(void*) (WebCrawler.cpp:132)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 184 bytes in 1 blocks are still reachable in loss record 30 of 60
+==4547==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x40943C: __static_initialization_and_destruction_0(int, int) (WebCrawler.cpp:35)
+==4547==    by 0x4094C8: _GLOBAL__sub_I_total_time_start (WebCrawler.cpp:284)
+==4547==    by 0x40DBAC: __libc_csu_init (in /media/share/Dropbox/Dropbox/FH/4_SS_2013/ErweiterteKonzepte/fhs33734/adv-prog12/aufgabe11/WebCrawler.out)
+==4547==    by 0x5CEE6FF: (below main) (libc-start.c:185)
+==4547== 
+==4547== 192 bytes in 4 blocks are still reachable in loss record 31 of 60
+==4547==    at 0x4C2B6CD: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x5069D18: Curl_hash_alloc (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5064633: curl_easy_perform (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x408A5D: workerFunc(void*) (WebCrawler.cpp:132)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 192 bytes in 4 blocks are still reachable in loss record 32 of 60
+==4547==    at 0x4C2B6CD: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x5075951: Curl_getaddrinfo_ex (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x506F95E: Curl_getaddrinfo (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5046E74: Curl_resolv (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x50470DF: Curl_resolv_timeout (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5058575: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x505C828: Curl_connect (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5063AF0: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x408A5D: workerFunc(void*) (WebCrawler.cpp:132)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 214 bytes in 1 blocks are still reachable in loss record 33 of 60
+==4547==    at 0x4C2B7B2: realloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x504CA05: Curl_add_buffer (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x504CAFF: Curl_add_bufferf (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x504D8AB: Curl_http (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x505CBB7: Curl_do (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5063B66: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x408A5D: workerFunc(void*) (WebCrawler.cpp:132)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 224 bytes in 4 blocks are still reachable in loss record 34 of 60
+==4547==    at 0x4C2B6CD: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x5069C23: Curl_hash_init (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5069D33: Curl_hash_alloc (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5064633: curl_easy_perform (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x408A5D: workerFunc(void*) (WebCrawler.cpp:132)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 240 bytes in 10 blocks are still reachable in loss record 35 of 60
+==4547==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x405F28: __gnu_cxx::new_allocator<std::_List_node<double> >::allocate(unsigned long, void const*) (new_allocator.h:92)
+==4547==    by 0x405E57: std::_List_base<double, std::allocator<double> >::_M_get_node() (stl_list.h:327)
+==4547==    by 0x405CF2: std::_List_node<double>* std::list<double, std::allocator<double> >::_M_create_node<double const&>(double const&&&) (stl_list.h:491)
+==4547==    by 0x405B49: void std::list<double, std::allocator<double> >::_M_insert<double const&>(std::_List_iterator<double>, double const&&&) (stl_list.h:1523)
+==4547==    by 0x405929: std::list<double, std::allocator<double> >::push_back(double const&) (stl_list.h:988)
+==4547==    by 0x405505: void std::list<double, std::allocator<double> >::_M_initialize_dispatch<std::_List_const_iterator<double> >(std::_List_const_iterator<double>, std::_List_const_iterator<double>, std::__false_type) (stl_list.h:1456)
+==4547==    by 0x404F7B: std::list<double, std::allocator<double> >::list(std::list<double, std::allocator<double> > const&) (stl_list.h:573)
+==4547==    by 0x4049F7: CrawlistElement::CrawlistElement(CrawlistElement const&) (CrawlistElement.h:16)
+==4547==    by 0x404A5C: __gnu_cxx::new_allocator<CrawlistElement>::construct(CrawlistElement*, CrawlistElement const&) (in /media/share/Dropbox/Dropbox/FH/4_SS_2013/ErweiterteKonzepte/fhs33734/adv-prog12/aufgabe11/WebCrawler.out)
+==4547==    by 0x404C01: void std::vector<CrawlistElement, std::allocator<CrawlistElement> >::_M_insert_aux<CrawlistElement const&>(__gnu_cxx::__normal_iterator<CrawlistElement*, std::vector<CrawlistElement, std::allocator<CrawlistElement> > >, CrawlistElement const&&&) (vector.tcc:335)
+==4547==    by 0x40474F: std::vector<CrawlistElement, std::allocator<CrawlistElement> >::push_back(CrawlistElement const&) (stl_vector.h:834)
+==4547== 
+==4547== 256 bytes in 4 blocks are still reachable in loss record 36 of 60
+==4547==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x407DD7: __gnu_cxx::new_allocator<std::string*>::allocate(unsigned long, void const*) (new_allocator.h:92)
+==4547==    by 0x40796D: std::_Deque_base<std::string, std::allocator<std::string> >::_M_allocate_map(unsigned long) (stl_deque.h:536)
+==4547==    by 0x40A4D4: std::_Deque_base<std::string, std::allocator<std::string> >::_M_initialize_map(unsigned long) (stl_deque.h:581)
+==4547==    by 0x409DD7: std::_Deque_base<std::string, std::allocator<std::string> >::_Deque_base() (stl_deque.h:452)
+==4547==    by 0x409B07: std::deque<std::string, std::allocator<std::string> >::deque() (stl_deque.h:772)
+==4547==    by 0x4087A6: workerFunc(void*) (WebCrawler.cpp:68)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 304 bytes in 1 blocks are still reachable in loss record 37 of 60
+==4547==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x407DD7: __gnu_cxx::new_allocator<std::string*>::allocate(unsigned long, void const*) (new_allocator.h:92)
+==4547==    by 0x40796D: std::_Deque_base<std::string, std::allocator<std::string> >::_M_allocate_map(unsigned long) (stl_deque.h:536)
+==4547==    by 0x407F79: std::deque<std::string, std::allocator<std::string> >::_M_reallocate_map(unsigned long, bool) (deque.tcc:881)
+==4547==    by 0x407AA9: std::deque<std::string, std::allocator<std::string> >::_M_reserve_map_at_back(unsigned long) (stl_deque.h:1888)
+==4547==    by 0x407327: void std::deque<std::string, std::allocator<std::string> >::_M_push_back_aux<std::string>(std::string&&) (deque.tcc:426)
+==4547==    by 0x406E76: void std::deque<std::string, std::allocator<std::string> >::emplace_back<std::string>(std::string&&) (deque.tcc:144)
+==4547==    by 0x406A73: std::deque<std::string, std::allocator<std::string> >::push_back(std::string&&) (stl_deque.h:1377)
+==4547==    by 0x40667F: URLQueue::append(std::string const&) (URLQueue.cpp:22)
+==4547==    by 0x408D62: workerFunc(void*) (WebCrawler.cpp:186)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 312 bytes in 4 blocks are possibly lost in loss record 38 of 60
+==4547==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x5638A88: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16)
+==4547==    by 0x5638C79: std::string::_M_mutate(unsigned long, unsigned long, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16)
+==4547==    by 0x56392F0: std::string::erase(unsigned long, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16)
+==4547==    by 0x408999: workerFunc(void*) (WebCrawler.cpp:122)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 316 bytes in 4 blocks are still reachable in loss record 39 of 60
+==4547==    at 0x4C2B6CD: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x5D55D81: strdup (strdup.c:43)
+==4547==    by 0x505592E: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x505A417: Curl_setopt (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x50645A0: curl_easy_setopt (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x408A3D: workerFunc(void*) (WebCrawler.cpp:129)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 408 bytes in 1 blocks are still reachable in loss record 40 of 60
+==4547==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x532BFEC: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::do_assign(char const*, char const*, unsigned int) (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x40A7A3: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, char const*, unsigned int) (basic_regex.hpp:379)
+==4547==    by 0x409F4C: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, unsigned int) (basic_regex.hpp:364)
+==4547==    by 0x409BF9: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::basic_regex(char const*, unsigned int) (basic_regex.hpp:333)
+==4547==    by 0x409467: __static_initialization_and_destruction_0(int, int) (WebCrawler.cpp:37)
+==4547==    by 0x4094C8: _GLOBAL__sub_I_total_time_start (WebCrawler.cpp:284)
+==4547==    by 0x40DBAC: __libc_csu_init (in /media/share/Dropbox/Dropbox/FH/4_SS_2013/ErweiterteKonzepte/fhs33734/adv-prog12/aufgabe11/WebCrawler.out)
+==4547==    by 0x5CEE6FF: (below main) (libc-start.c:185)
+==4547== 
+==4547== 412 bytes in 4 blocks are possibly lost in loss record 41 of 60
+==4547==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x5638A88: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16)
+==4547==    by 0x5638C79: std::string::_M_mutate(unsigned long, unsigned long, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16)
+==4547==    by 0x5638E1B: std::string::_M_replace_safe(unsigned long, unsigned long, char const*, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16)
+==4547==    by 0x408D49: workerFunc(void*) (WebCrawler.cpp:184)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 440 bytes in 1 blocks are still reachable in loss record 42 of 60
+==4547==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x532B4AC: boost::object_cache<boost::re_detail::cpp_regex_traits_base<char>, boost::re_detail::cpp_regex_traits_implementation<char> >::do_get(boost::re_detail::cpp_regex_traits_base<char> const&, unsigned long) (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x531B01F: ??? (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x532BC27: boost::re_detail::regex_data<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::regex_data() (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x532BFF7: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::do_assign(char const*, char const*, unsigned int) (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x40A7A3: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, char const*, unsigned int) (basic_regex.hpp:379)
+==4547==    by 0x409F4C: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, unsigned int) (basic_regex.hpp:364)
+==4547==    by 0x409BF9: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::basic_regex(char const*, unsigned int) (basic_regex.hpp:333)
+==4547==    by 0x409467: __static_initialization_and_destruction_0(int, int) (WebCrawler.cpp:37)
+==4547==    by 0x4094C8: _GLOBAL__sub_I_total_time_start (WebCrawler.cpp:284)
+==4547==    by 0x40DBAC: __libc_csu_init (in /media/share/Dropbox/Dropbox/FH/4_SS_2013/ErweiterteKonzepte/fhs33734/adv-prog12/aufgabe11/WebCrawler.out)
+==4547==    by 0x5CEE6FF: (below main) (libc-start.c:185)
+==4547== 
+==4547== 544 bytes in 4 blocks are still reachable in loss record 43 of 60
+==4547==    at 0x4C29DB4: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x504DBF8: Curl_http (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x505CBB7: Curl_do (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5063B66: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x408A5D: workerFunc(void*) (WebCrawler.cpp:132)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 774 bytes in 3 blocks are still reachable in loss record 44 of 60
+==4547==    at 0x4C2B6CD: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x5056B3F: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x505C828: Curl_connect (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5063AF0: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x408A5D: workerFunc(void*) (WebCrawler.cpp:132)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 896 bytes in 28 blocks are still reachable in loss record 45 of 60
+==4547==    at 0x4C2B6CD: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x5069851: Curl_llist_alloc (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5069C5B: Curl_hash_init (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5069D33: Curl_hash_alloc (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5064633: curl_easy_perform (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x408A5D: workerFunc(void*) (WebCrawler.cpp:132)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 984 bytes in 41 blocks are still reachable in loss record 46 of 60
+==4547==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x405F28: __gnu_cxx::new_allocator<std::_List_node<double> >::allocate(unsigned long, void const*) (new_allocator.h:92)
+==4547==    by 0x405E57: std::_List_base<double, std::allocator<double> >::_M_get_node() (stl_list.h:327)
+==4547==    by 0x405CF2: std::_List_node<double>* std::list<double, std::allocator<double> >::_M_create_node<double const&>(double const&&&) (stl_list.h:491)
+==4547==    by 0x405B49: void std::list<double, std::allocator<double> >::_M_insert<double const&>(std::_List_iterator<double>, double const&&&) (stl_list.h:1523)
+==4547==    by 0x405929: std::list<double, std::allocator<double> >::push_back(double const&) (stl_list.h:988)
+==4547==    by 0x4060D5: CrawlistElement::add_load_time(double) (CrawlistElement.cpp:37)
+==4547==    by 0x404360: Crawlist::add_load_time(std::string, double) (Crawlist.cpp:94)
+==4547==    by 0x408B70: workerFunc(void*) (WebCrawler.cpp:145)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 1,024 bytes in 4 blocks are still reachable in loss record 47 of 60
+==4547==    at 0x4C2B6CD: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x50563B1: Curl_open (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x50644F9: curl_easy_init (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x4087E0: workerFunc(void*) (WebCrawler.cpp:80)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 1,032 bytes in 4 blocks are still reachable in loss record 48 of 60
+==4547==    at 0x4C2B6CD: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x5056B1C: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x505C828: Curl_connect (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5063AF0: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x408A5D: workerFunc(void*) (WebCrawler.cpp:132)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 1,216 bytes in 4 blocks are possibly lost in loss record 49 of 60
+==4547==    at 0x4C29DB4: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x4012074: _dl_allocate_tls (dl-tls.c:297)
+==4547==    by 0x5AB8ABC: pthread_create@@GLIBC_2.2.5 (allocatestack.c:571)
+==4547==    by 0x4091C4: main (WebCrawler.cpp:263)
+==4547== 
+==4547== 2,048 bytes in 4 blocks are still reachable in loss record 50 of 60
+==4547==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x408093: __gnu_cxx::new_allocator<std::string>::allocate(unsigned long, void const*) (new_allocator.h:92)
+==4547==    by 0x407ADE: std::_Deque_base<std::string, std::allocator<std::string> >::_M_allocate_node() (stl_deque.h:525)
+==4547==    by 0x40CCB9: void std::deque<std::string, std::allocator<std::string> >::_M_push_front_aux<std::string>(std::string&&) (deque.tcc:461)
+==4547==    by 0x40C2E2: void std::deque<std::string, std::allocator<std::string> >::emplace_front<std::string>(std::string&&) (deque.tcc:127)
+==4547==    by 0x40B74F: std::deque<std::string, std::allocator<std::string> >::push_front(std::string&&) (stl_deque.h:1345)
+==4547==    by 0x40AC86: std::front_insert_iterator<std::deque<std::string, std::allocator<std::string> > >::operator=(std::string&&) (stl_iterator.h:529)
+==4547==    by 0x40B214: boost::re_detail::split_pred<std::front_insert_iterator<std::deque<std::string, std::allocator<std::string> > >, char, std::char_traits<char>, std::allocator<char> >::operator()(boost::match_results<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<boost::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string> > > > const&) (regex_split.hpp:78)
+==4547==    by 0x40A96B: unsigned int boost::regex_grep<boost::re_detail::split_pred<std::front_insert_iterator<std::deque<std::string, std::allocator<std::string> > >, char, std::char_traits<char>, std::allocator<char> >, __gnu_cxx::__normal_iterator<char const*, std::string>, char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >(boost::re_detail::split_pred<std::front_insert_iterator<std::deque<std::string, std::allocator<std::string> > >, char, std::char_traits<char>, std::allocator<char> >, __gnu_cxx::__normal_iterator<char const*, std::string>, __gnu_cxx::__normal_iterator<char const*, std::string>, boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > > const&, boost::regex_constants::_match_flags) (regex_grep.hpp:58)
+==4547==    by 0x40A106: unsigned long boost::regex_split<std::front_insert_iterator<std::deque<std::string, std::allocator<std::string> > >, char, std::char_traits<char>, std::allocator<char>, boost::regex_traits<char, boost::cpp_regex_traits<char> > >(std::front_insert_iterator<std::deque<std::string, std::allocator<std::string> > >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&, boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > > const&, boost::regex_constants::_match_flags, unsigned long) (regex_split.hpp:117)
+==4547==    by 0x409C9F: unsigned long boost::regex_split<std::front_insert_iterator<std::deque<std::string, std::allocator<std::string> > >, char, std::char_traits<char>, std::allocator<char>, boost::regex_traits<char, boost::cpp_regex_traits<char> > >(std::front_insert_iterator<std::deque<std::string, std::allocator<std::string> > >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&, boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > > const&, boost::regex_constants::_match_flags) (regex_split.hpp:143)
+==4547==    by 0x408CC8: workerFunc(void*) (WebCrawler.cpp:168)
+==4547== 
+==4547== 3,680 bytes in 4 blocks are still reachable in loss record 51 of 60
+==4547==    at 0x4C29DB4: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x50724F0: Curl_ssl_initsessions (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5063122: Curl_pretransfer (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5063AC1: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x408A5D: workerFunc(void*) (WebCrawler.cpp:132)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 4,096 bytes in 1 blocks are still reachable in loss record 52 of 60
+==4547==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x533F641: boost::re_detail::get_mem_block() (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x531F55B: boost::re_detail::perl_matcher<__gnu_cxx::__normal_iterator<char const*, std::string>, std::allocator<boost::sub_match<__gnu_cxx::__normal_iterator<char const*, std::string> > >, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::find_imp() (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x40AAF5: unsigned int boost::regex_grep<boost::re_detail::split_pred<std::front_insert_iterator<std::deque<std::string, std::allocator<std::string> > >, char, std::char_traits<char>, std::allocator<char> >, __gnu_cxx::__normal_iterator<char const*, std::string>, char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >(boost::re_detail::split_pred<std::front_insert_iterator<std::deque<std::string, std::allocator<std::string> > >, char, std::char_traits<char>, std::allocator<char> >, __gnu_cxx::__normal_iterator<char const*, std::string>, __gnu_cxx::__normal_iterator<char const*, std::string>, boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > > const&, boost::regex_constants::_match_flags) (regex_grep.hpp:55)
+==4547==    by 0x40A106: unsigned long boost::regex_split<std::front_insert_iterator<std::deque<std::string, std::allocator<std::string> > >, char, std::char_traits<char>, std::allocator<char>, boost::regex_traits<char, boost::cpp_regex_traits<char> > >(std::front_insert_iterator<std::deque<std::string, std::allocator<std::string> > >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&, boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > > const&, boost::regex_constants::_match_flags, unsigned long) (regex_split.hpp:117)
+==4547==    by 0x409C9F: unsigned long boost::regex_split<std::front_insert_iterator<std::deque<std::string, std::allocator<std::string> > >, char, std::char_traits<char>, std::allocator<char>, boost::regex_traits<char, boost::cpp_regex_traits<char> > >(std::front_insert_iterator<std::deque<std::string, std::allocator<std::string> > >, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&, boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > > const&, boost::regex_constants::_match_flags) (regex_split.hpp:143)
+==4547==    by 0x408CC8: workerFunc(void*) (WebCrawler.cpp:168)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 4,096 bytes in 1 blocks are still reachable in loss record 53 of 60
+==4547==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x533FD4E: boost::re_detail::raw_storage::resize(unsigned long) (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x531E214: boost::re_detail::basic_regex_creator<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::append_state(boost::re_detail::syntax_element_type, unsigned long) (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x5322907: boost::re_detail::basic_regex_creator<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::append_set(boost::re_detail::basic_char_set<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > > const&, mpl_::bool_<true>*) (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x5323C83: boost::re_detail::basic_regex_parser<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::parse_extended_escape() (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x53294B4: boost::re_detail::basic_regex_parser<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::parse_extended() (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x532B103: boost::re_detail::basic_regex_parser<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::parse(char const*, char const*, unsigned int) (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x532BF45: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::do_assign(char const*, char const*, unsigned int) (in /usr/lib/libboost_regex.so.1.49.0)
+==4547==    by 0x40A7A3: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, char const*, unsigned int) (basic_regex.hpp:379)
+==4547==    by 0x409F4C: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::assign(char const*, unsigned int) (basic_regex.hpp:364)
+==4547==    by 0x409BF9: boost::basic_regex<char, boost::regex_traits<char, boost::cpp_regex_traits<char> > >::basic_regex(char const*, unsigned int) (basic_regex.hpp:333)
+==4547==    by 0x409467: __static_initialization_and_destruction_0(int, int) (WebCrawler.cpp:37)
+==4547== 
+==4547== 4,872 bytes in 3 blocks are still reachable in loss record 54 of 60
+==4547==    at 0x4C29DB4: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x505689A: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x505C828: Curl_connect (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5063AF0: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x408A5D: workerFunc(void*) (WebCrawler.cpp:132)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 5,632 bytes in 11 blocks are still reachable in loss record 55 of 60
+==4547==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x408093: __gnu_cxx::new_allocator<std::string>::allocate(unsigned long, void const*) (new_allocator.h:92)
+==4547==    by 0x407ADE: std::_Deque_base<std::string, std::allocator<std::string> >::_M_allocate_node() (stl_deque.h:525)
+==4547==    by 0x40733F: void std::deque<std::string, std::allocator<std::string> >::_M_push_back_aux<std::string>(std::string&&) (deque.tcc:427)
+==4547==    by 0x406E76: void std::deque<std::string, std::allocator<std::string> >::emplace_back<std::string>(std::string&&) (deque.tcc:144)
+==4547==    by 0x406A73: std::deque<std::string, std::allocator<std::string> >::push_back(std::string&&) (stl_deque.h:1377)
+==4547==    by 0x40667F: URLQueue::append(std::string const&) (URLQueue.cpp:22)
+==4547==    by 0x408D62: workerFunc(void*) (WebCrawler.cpp:186)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 6,120 bytes in 255 blocks are still reachable in loss record 56 of 60
+==4547==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x405F28: __gnu_cxx::new_allocator<std::_List_node<double> >::allocate(unsigned long, void const*) (new_allocator.h:92)
+==4547==    by 0x405E57: std::_List_base<double, std::allocator<double> >::_M_get_node() (stl_list.h:327)
+==4547==    by 0x405CF2: std::_List_node<double>* std::list<double, std::allocator<double> >::_M_create_node<double const&>(double const&&&) (stl_list.h:491)
+==4547==    by 0x405B49: void std::list<double, std::allocator<double> >::_M_insert<double const&>(std::_List_iterator<double>, double const&&&) (stl_list.h:1523)
+==4547==    by 0x405929: std::list<double, std::allocator<double> >::push_back(double const&) (stl_list.h:988)
+==4547==    by 0x405505: void std::list<double, std::allocator<double> >::_M_initialize_dispatch<std::_List_const_iterator<double> >(std::_List_const_iterator<double>, std::_List_const_iterator<double>, std::__false_type) (stl_list.h:1456)
+==4547==    by 0x404F7B: std::list<double, std::allocator<double> >::list(std::list<double, std::allocator<double> > const&) (stl_list.h:573)
+==4547==    by 0x4049F7: CrawlistElement::CrawlistElement(CrawlistElement const&) (CrawlistElement.h:16)
+==4547==    by 0x404A5C: __gnu_cxx::new_allocator<CrawlistElement>::construct(CrawlistElement*, CrawlistElement const&) (in /media/share/Dropbox/Dropbox/FH/4_SS_2013/ErweiterteKonzepte/fhs33734/adv-prog12/aufgabe11/WebCrawler.out)
+==4547==    by 0x404717: std::vector<CrawlistElement, std::allocator<CrawlistElement> >::push_back(CrawlistElement const&) (stl_vector.h:830)
+==4547==    by 0x403EFE: Crawlist::add(CrawlistElement*) (Crawlist.cpp:23)
+==4547== 
+==4547== 16,384 bytes in 1 blocks are still reachable in loss record 57 of 60
+==4547==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x405767: __gnu_cxx::new_allocator<CrawlistElement>::allocate(unsigned long, void const*) (new_allocator.h:92)
+==4547==    by 0x4052F6: std::_Vector_base<CrawlistElement, std::allocator<CrawlistElement> >::_M_allocate(unsigned long) (in /media/share/Dropbox/Dropbox/FH/4_SS_2013/ErweiterteKonzepte/fhs33734/adv-prog12/aufgabe11/WebCrawler.out)
+==4547==    by 0x404BC8: void std::vector<CrawlistElement, std::allocator<CrawlistElement> >::_M_insert_aux<CrawlistElement const&>(__gnu_cxx::__normal_iterator<CrawlistElement*, std::vector<CrawlistElement, std::allocator<CrawlistElement> > >, CrawlistElement const&&&) (vector.tcc:327)
+==4547==    by 0x40474F: std::vector<CrawlistElement, std::allocator<CrawlistElement> >::push_back(CrawlistElement const&) (stl_vector.h:834)
+==4547==    by 0x403EFE: Crawlist::add(CrawlistElement*) (Crawlist.cpp:23)
+==4547==    by 0x408E50: workerFunc(void*) (WebCrawler.cpp:199)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 32,640 bytes in 4 blocks are possibly lost in loss record 58 of 60
+==4547==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x5638A88: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16)
+==4547==    by 0x56397FA: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16)
+==4547==    by 0x56398DF: std::string::reserve(unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16)
+==4547==    by 0x5639D37: std::string::append(std::string const&, unsigned long, unsigned long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16)
+==4547==    by 0x408671: writeToString(void*, unsigned long, unsigned long, void*) (WebCrawler.cpp:42)
+==4547==    by 0x50502D7: Curl_client_write (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5062F21: Curl_readwrite (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x5063DA7: ??? (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x408A5D: workerFunc(void*) (WebCrawler.cpp:132)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 89,507 bytes in 869 blocks are possibly lost in loss record 59 of 60
+==4547==    at 0x4C2B1C7: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x5638A88: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16)
+==4547==    by 0x563A494: char* std::string::_S_construct<char const*>(char const*, char const*, std::allocator<char> const&, std::forward_iterator_tag) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16)
+==4547==    by 0x563A5E2: std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16)
+==4547==    by 0x406668: URLQueue::append(std::string const&) (URLQueue.cpp:22)
+==4547==    by 0x408D62: workerFunc(void*) (WebCrawler.cpp:186)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== 143,296 bytes in 4 blocks are still reachable in loss record 60 of 60
+==4547==    at 0x4C29DB4: calloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==4547==    by 0x5056388: Curl_open (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x50644F9: curl_easy_init (in /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.2.0)
+==4547==    by 0x4087E0: workerFunc(void*) (WebCrawler.cpp:80)
+==4547==    by 0x5AB7E99: start_thread (pthread_create.c:308)
+==4547==    by 0x5DC0CCC: clone (clone.S:112)
+==4547== 
+==4547== LEAK SUMMARY:
+==4547==    definitely lost: 0 bytes in 0 blocks
+==4547==    indirectly lost: 0 bytes in 0 blocks
+==4547==      possibly lost: 124,293 bytes in 887 blocks
+==4547==    still reachable: 200,383 bytes in 478 blocks
+==4547==         suppressed: 0 bytes in 0 blocks
+==4547== 
+==4547== For counts of detected and suppressed errors, rerun with: -v
+==4547== ERROR SUMMARY: 7 errors from 7 contexts (suppressed: 2 from 2)

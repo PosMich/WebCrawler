@@ -24,7 +24,7 @@ void URLQueue::append(const string &x)
     pthread_mutex_unlock(&mutex);
 }
 
-unsigned int URLQueue::size() const
+unsigned int URLQueue::size()
 {
     pthread_mutex_lock(&mutex);
     unsigned int s = q.size();
@@ -39,7 +39,7 @@ string URLQueue::get()
         pthread_mutex_lock(&mutex);
 
         string x = "";
-        
+
         if (q.empty())
         {
             if( operators > 0)
@@ -77,7 +77,7 @@ string URLQueue::get()
         q.erase(q.begin());
         pthread_mutex_unlock(&mutex);
         return x;
-        
+
     }
     return "";
 }
