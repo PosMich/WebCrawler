@@ -1,0 +1,15 @@
+creating threads
+************** CrawList **************
+Total time needed: 1.06069
+Good Links found: 4
+Broken Links found: 2
+Total Links found: 6
+
+************** Details **************
+URL	Broken	Counter	AVG-load-time	MAX-load-time
+http://pmeerw.net/crawlertest2/index.html	good	2	0.0278057	0.0335707
+http://pmeerw.net/crawlertest2/good1.html	good	2	0.0200006	0.022278
+http://pmeerw.net/crawlertest2/bad1.html	broken	1	0.0223938	0.0223938
+http://pmeerw.net/crawlertest2/good2.html	good	2	0.481409	0.942887
+http://pmeerw.net/crawlertest2/bad2.html	broken	3	0.023945	0.0300843
+http://pmeerw.net/crawlertest2/good3.html	good	2	0.476131	0.931214
