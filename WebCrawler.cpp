@@ -59,7 +59,7 @@ void *workerFunc( void *arg )
   timespec time_start, time_end;
 
   string curr_url, base_url;
-  queue<string> raw_urls;
+  deque<string> raw_urls;
 
   size_t found;
   unsigned slash_pos = 0;

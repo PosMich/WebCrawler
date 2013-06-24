@@ -6,11 +6,12 @@ CXXFLAGS = -g -Wall -Weffc++ -std=c++0x
 LDFLAGS = -lrt -pthread -lcurl -lboost_regex
 CXX = g++
 OUT = WebCrawler.out
+CPPFILES = Crawlist.cpp CrawlistElement.cpp URLQueue.cpp WebCrawler.cpp
 
 all: webcrawler
 
-webcrawler: *.cpp
-	$(CXX) *.cpp $(CXXFLAGS) $(LDFLAGS) -o $(OUT)
+webcrawler: 
+	$(CXX) $(CPPFILES) $(CXXFLAGS) $(LDFLAGS) -o $(OUT)
 
 mem: webcrawler
 	valgrind --tool=memcheck --leak-check=full --show-reachable=yes ./$(OUT) http://multimediatechnology.at/~fhs33741/web-crawler/09bvqb9g90jemhx4s2y0.html 100 4
